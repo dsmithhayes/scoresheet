@@ -1,8 +1,0 @@
-<?php
-
-namespace Scoresheet\Statistics;
-
-abstract class Calculator
-{
-    public static function calculate(callable $callback);
-}

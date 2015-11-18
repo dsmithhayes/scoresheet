@@ -1,8 +1,0 @@
-<?php
-
-namespace Scoresheet\Model\Table;
-
-class PlayersTable extends Table
-{
-
-}
