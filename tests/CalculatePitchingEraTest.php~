@@ -1,0 +1,11 @@
+<?php
+
+use Scoresheet\Statistics\Fielding\Pitching;
+
+public calss CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
+{
+    public function testEra()
+    {
+    
+    }
+}

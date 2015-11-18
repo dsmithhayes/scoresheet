@@ -1,0 +1,27 @@
+{
+    "name": "dsmithhayes/scoresheet",
+    "description": "A baseball scoresheet api.",
+    "type": "API",
+    "require": {
+        "php": ">= 5.4",
+        "slim/slim": "^2.6",
+        "cakephp/orm": "^3.1",
+        "cakephp/core": "^3.1",
+        "league/csv": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0"
+    },
+    "license": "BSD 3.0",
+    "authors": [
+        {
+            "name": "Dave Smith-Hayes",
+            "email": "dsmithhayes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Scoresheet\\": "src/"
+        }
+    }
+}

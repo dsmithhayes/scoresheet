@@ -1,0 +1,11 @@
+<?php
+
+require '../bootstrap.php';
+
+use Slim\Slim;
+
+$scoresheet = new Slim();
+
+
+
+$scoresheet->run();
