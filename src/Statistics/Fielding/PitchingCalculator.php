@@ -5,30 +5,12 @@ namespace Scoresheet\Statistics\Fielding;
 use Scoresheet\Statistics\Calculator;
 use Scoresheet\Statistics\Game;
 
+/**
+ * This calculator can be used to perform pitching related statistical 
+ * equations. All of its methods are static.
+ */
 class PitchingCalculator extends Calculator
 {
-    /**
-     * Use this to add the actual two-thirds value to the innings for easier 
-     * calculations.
-     *
-     * @return float One third in decimal
-     */
-    public static function oneThirdInning()
-    {
-        return 1 / 3;
-    }
-    
-    /**
-     * Use this to add the actual two-thirds value to the innings for easier 
-     * calculations.
-     * 
-     * @return float Two thirds in decimal
-     */
-    public static function twoThirdsInning()
-    {
-        return 2 / 3;
-    }
-
     /**
      * @param  int   $bb The number of base on balls
      * @return float     The calculcated base on balls per 9 innings
@@ -46,18 +28,6 @@ class PitchingCalculator extends Calculator
     public static function era($er, $ip)
     {
         return round(((Game::TOTAL_INNINGS * $er) / $ip), 2);
-    }
-    
-    /**
-     * @param  int   $w The number of total wins
-     * @param  int   $l The number of total losses
-     * @return float    The calculated win-loss percentage
-     */
-    public static function wlp($w, $l)
-    {
-        $totalDecisions = $w + $l;
-        
-        return round(($w / $totalDecisions), 3);
     }
     
     /**

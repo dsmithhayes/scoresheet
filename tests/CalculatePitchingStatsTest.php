@@ -14,6 +14,16 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
         return 249 + PitchingCalculator::twoThirdsInning();
     }
 
+    public function testParseOneThirdInnings()
+    {
+        $this->assertEquals(1.3333333333333333, PitchingCalculator::parseInnings(1.1));
+    }
+    
+    public function testParseTwoThirdsInnings()
+    {
+        $this->assertEquals(1.6666666666666665, PitchingCalculator::parseInnings(1.2));
+    }
+
     public function testEra()
     {
         $this->assertEquals(2.49, PitchingCalculator::era(69, $this->ip()));
