@@ -3,6 +3,7 @@
 namespace Scoresheet\Statistics\Batting;
 
 use Scoresheet\Statistics\Calculator;
+use Scoresheet\Statistics\Game;
 
 class BattingCalculator extends Calculator
 {

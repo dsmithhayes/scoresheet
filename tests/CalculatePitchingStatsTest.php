@@ -36,7 +36,7 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
     
     public function testWlp()
     {
-        $this->assertEquals(.778, PitchingCalculator::wlp(21, 6));
+        $this->assertEquals(0.778, PitchingCalculator::wlp(21, 6));
     }
     
     public function testWhip()
