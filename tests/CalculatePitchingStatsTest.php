@@ -11,7 +11,7 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
      * Randy's total innings pitched
      */
     protected function ip() {
-        return 249 + PitchingCalculator::twoThirdsInning();
+        return 249.2;
     }
 
     public function testParseOneThirdInnings()
@@ -41,7 +41,7 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
     
     public function testWhip()
     {
-        $whip = PitchingCalculator::whip(71, 181, 249.2);
+        $whip = PitchingCalculator::whip(71, 181, $this->ip());
         $this->assertEquals(1.009, $whip);
     }
 }
