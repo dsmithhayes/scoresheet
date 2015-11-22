@@ -29,8 +29,8 @@ abstract class Calculator
     /**
      * Parses a formatted inning like 2.1 into a real number.
      *
-     * @param float $ip A formatted inning
-     * @return float A real number
+     * @param  float $ip A formatted inning
+     * @return float     A real number
      */
     public static function parseInnings($ip)
     {

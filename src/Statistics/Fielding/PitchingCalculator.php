@@ -18,6 +18,8 @@ class PitchingCalculator extends Calculator
      */
     public static function era($er, $ip)
     {
+        $ip = Game::parseInnings($ip);
+        
         return round(((Game::TOTAL_INNINGS * $er) / $ip), 2);
     }
     
@@ -29,6 +31,8 @@ class PitchingCalculator extends Calculator
      */
     public static function whip($bb, $h, $ip)
     {
+        $ip = Game::parseInnings($ip);
+        
         return round((($bb + $h) / $ip), 3);
     }
 
@@ -39,6 +43,8 @@ class PitchingCalculator extends Calculator
      */
     public static function h9($h, $ip)
     {
+        $ip = Game::parseInnings($ip);
+    
         return round((($h * Game::TOTAL_INNINGS) / $ip), 1);
     }
     
@@ -49,6 +55,8 @@ class PitchingCalculator extends Calculator
      */
     public static function hr9($hr, $ip)
     {
+        $ip = Game::parseInnings($ip);
+        
         return round((($hr * Game::TOTAL_INNINGS) / $ip), 1);
     }
 
@@ -59,6 +67,8 @@ class PitchingCalculator extends Calculator
      */
     public static function bb9($bb, $ip)
     {
+        $ip = Game::parseInnings($ip);
+        
         return round((($bb * Game::TOTAL_INNINGS) / $ip), 1);
     }
     
@@ -69,6 +79,8 @@ class PitchingCalculator extends Calculator
      */
     public static function so9($so, $ip)
     {
+        $ip = Game::parseInnings($ip);
+        
         return round((($so *Game::TOTAL_INNINGS) / $ip), 1);
     }
     
