@@ -41,4 +41,14 @@ class BattingCalculator extends Calculator
     {
         return round((($1b + (2 * $2b) + (3 * $3b) + (4 * $hr)) / $ab), 3);
     }
+    
+    /**
+     * @param  float $obp The on-base percentage
+     * @param  float $slg The slugging percentage
+     * @return float      The calculated on-base plus slugging percentage
+     */
+    public static function ops($obp, $slg)
+    {
+        return $obp + $slg;
+    }
 }
