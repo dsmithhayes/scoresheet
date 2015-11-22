@@ -41,7 +41,7 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
     
     public function testWhip()
     {
-        $whip = PitchingCalculator::whip(71, 181, $this->ip());
+        $whip = PitchingCalculator::whip(71, 181, 249.2);
         $this->assertEquals(1.009, $whip);
     }
 }

@@ -23,7 +23,7 @@ $scoresheet->get('/', function () {
  * Pitching calculator
  */
 $scoresheet->get('/pitching-calculator/:method+', function ($method) {
-    $nameSpace = "Scoresheet\\Statistics\\Fielding\\PitchingCalculator::";
+    $nameSpace  = "Scoresheet\\Statistics\\Fielding\\PitchingCalculator::";
     $methodName = $nameSpace . $method[0];
     
     array_shift($method);
