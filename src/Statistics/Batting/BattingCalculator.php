@@ -16,7 +16,7 @@ class BattingCalculator extends Calculator
     {
         return round(($h / $ab), 3);
     }
-    
+
     /**
      * @param  int   $h   The number of hits
      * @param  int   $bb  The number of walks
@@ -29,20 +29,20 @@ class BattingCalculator extends Calculator
     {
         return round((($h + $bb + $hbp) / ($ab + $bb + $hbp + $sf)), 3);
     }
-    
+
     /**
-     * @param  int   $1b The number of singles
-     * @param  int   $2b The number of doubles
-     * @param  int   $3b The number of triples
+     * @param  int   $b1 The number of singles
+     * @param  int   $b2 The number of doubles
+     * @param  int   $b3 The number of triples
      * @param  int   $hr The number of home runs
      * @param  int   $ab The number of at bats
      * @return float     The calculated slugging percentage
      */
-    public static function slg($1b, $2b, $3b, $hr, $ab)
+    public static function slg($b1, $b2, $b2, $hr, $ab)
     {
-        return round((($1b + (2 * $2b) + (3 * $3b) + (4 * $hr)) / $ab), 3);
+        return round((($b2 + (2 * $b2) + (3 * $b2) + (4 * $hr)) / $ab), 3);
     }
-    
+
     /**
      * @param  float $obp The on-base percentage
      * @param  float $slg The slugging percentage

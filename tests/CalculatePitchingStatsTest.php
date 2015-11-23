@@ -18,7 +18,7 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(1.3333333333333333, PitchingCalculator::parseInnings(1.1));
     }
-    
+
     public function testParseTwoThirdsInnings()
     {
         $this->assertEquals(1.6666666666666665, PitchingCalculator::parseInnings(1.2));
@@ -28,17 +28,22 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(2.49, PitchingCalculator::era(69, $this->ip()));
     }
-    
+
     public function testBb9()
     {
         $this->assertEquals(2.6, PitchingCalculator::bb9(71, $this->ip()));
     }
-    
+
+    public function testSo9()
+    {
+        $this->assertEquals(13.4, PitchingCalculator::so9(372, 249.2));
+    }
+
     public function testWlp()
     {
         $this->assertEquals(0.778, PitchingCalculator::wlp(21, 6));
     }
-    
+
     public function testWhip()
     {
         $whip = PitchingCalculator::whip(71, 181, $this->ip());
