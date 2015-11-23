@@ -2,6 +2,8 @@
 
 namespace Scoresheet\Statistics;
 
+use Scoresheet\Exception\InvalidParsingException;
+
 abstract class Calculator
 {
     /**

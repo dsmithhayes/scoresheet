@@ -31,6 +31,9 @@ $scoresheet->get('/pitching-calculator/:method+', function ($method) {
     echo call_user_func_array($methodName, $method);
 })->via('GET');
 
+/**
+ * Batting calculator
+ */
 $scoresheet->get('/batting-calculator/:method+', function ($method) {
     $nameSpace = "Scoresheet\\Statistics\\Batting\\BattingCalculator::";
     $methodName = $nameSpace . $method[0];
@@ -38,7 +41,7 @@ $scoresheet->get('/batting-calculator/:method+', function ($method) {
     array_shift($method);
 
     echo call_user_func_array($methodName, $method);
-});
+})->via('GET');
 
 /**
  * Running
