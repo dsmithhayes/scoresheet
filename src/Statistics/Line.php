@@ -44,6 +44,16 @@ abstract class Line
     protected $hr;
 
     /**
+     * @var int Balls
+     */
+    protected $bb;
+
+    /**
+     * @var int Hit by pitches
+     */
+    protected $hbp;
+
+    /**
      * @param  string $property The name of the property to get
      * @return mixed            The value of the property from the line
      */
@@ -59,5 +69,19 @@ abstract class Line
     public function set($property, $value)
     {
         $this->{$property} = $value;
+    }
+
+    /**
+     * @return array A key'd array of the properties in the line.
+     */
+    public function getLine()
+    {
+        return [
+            'gp' => $this->gp,
+            '1b' => $this->b1,
+            '2b' => $this->b2,
+            '3b' => $this->b3,
+            'hr' => $this->hr
+        ];
     }
 }

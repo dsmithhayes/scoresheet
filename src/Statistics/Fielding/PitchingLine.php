@@ -13,9 +13,4 @@ class PitchingLine extends Line
 {
     protected $era;
     protected $whip;
-
-    public function addHit()
-    {
-        return ++$this->h;
-    }
 }
