@@ -6,6 +6,7 @@ use Slim\Slim;
 use Scoresheet\Statistics\Game;
 use Scoresheet\Statistics\Calculator;
 use Scoresheet\Statistics\Fielding\PitchingCalculator;
+use Scoresheet\Statistics\Batting\BattingCalculator;
 
 /**
  * Entry point of the API.
