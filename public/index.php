@@ -16,7 +16,7 @@ $scoresheet = new Slim();
  * Routing
  */
 $scoresheet->get('/', function () {
-    echo 'Welcome to Scoresheet.';
+    echo 'Scoresheet: PHP Baseball API';
 });
 
 /**
