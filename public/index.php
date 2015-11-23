@@ -25,10 +25,20 @@ $scoresheet->get('/', function () {
 $scoresheet->get('/pitching-calculator/:method+', function ($method) {
     $nameSpace  = "Scoresheet\\Statistics\\Fielding\\PitchingCalculator::";
     $methodName = $nameSpace . $method[0];
-    
+
     array_shift($method);
+
     echo call_user_func_array($methodName, $method);
 })->via('GET');
+
+$scoresheet->get('/batting-calculator/:method+', function ($method) {
+    $nameSpace = "Scoresheet\\Statistics\\Batting\\BattingCalculator::";
+    $methodName = $nameSpace . $method[0];
+
+    array_shift($method);
+
+    echo call_user_func_array($methodName, $method);
+});
 
 /**
  * Running
