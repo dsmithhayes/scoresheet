@@ -3,7 +3,7 @@
 use Scoresheet\Statistics\Fielding\PitchingCalculator;
 
 /**
- * Randy Johnson's 2001 campaign is the one of choice.
+ * Randy Johnson's 2001 season is the one of choice.
  */
 class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
 {
@@ -36,7 +36,17 @@ class CalculatPitchingStatsTest extends PHPUnit_Framework_TestCase
 
     public function testSo9()
     {
-        $this->assertEquals(13.4, PitchingCalculator::so9(372, 249.2));
+        $this->assertEquals(13.4, PitchingCalculator::so9(372, $this->ip()));
+    }
+
+    public function testHr9()
+    {
+        $this->assertEquals(0.7, PitchingCalculator::hr9(19, $this->ip()));
+    }
+
+    public function testH9()
+    {
+        $this->assertEquals(6.5, PitchingCalculator::h9(181, $this->ip()));
     }
 
     public function testWlp()

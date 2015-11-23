@@ -38,9 +38,9 @@ class BattingCalculator extends Calculator
      * @param  int   $ab The number of at bats
      * @return float     The calculated slugging percentage
      */
-    public static function slg($b1, $b2, $b2, $hr, $ab)
+    public static function slg($b1, $b2, $b3, $hr, $ab)
     {
-        return round((($b2 + (2 * $b2) + (3 * $b2) + (4 * $hr)) / $ab), 3);
+        return round((($b1 + (2 * $b2) + (3 * $b3) + (4 * $hr)) / $ab), 3);
     }
 
     /**
