@@ -3,10 +3,10 @@
 namespace Scoresheet\Statistics\Fielding;
 
 use Scoresheet\Statistics\Calculator;
-use Scoresheet\Statistics\Game;
+use Scoresheet\Game;
 
 /**
- * This calculator can be used to perform pitching related statistical 
+ * This calculator can be used to perform pitching related statistical
  * equations. All of its methods are static.
  */
 class PitchingCalculator extends Calculator
@@ -19,10 +19,10 @@ class PitchingCalculator extends Calculator
     public static function era($er, $ip)
     {
         $ip = self::parseInnings($ip);
-        
+
         return round(((Game::TOTAL_INNINGS * $er) / $ip), 2);
     }
-    
+
     /**
      * @param  int   $bb The number of base on balls
      * @param  int   $h  The number of hits
@@ -32,7 +32,7 @@ class PitchingCalculator extends Calculator
     public static function whip($bb, $h, $ip)
     {
         $ip = self::parseInnings($ip);
-        
+
         return round((($bb + $h) / $ip), 3);
     }
 
@@ -44,10 +44,10 @@ class PitchingCalculator extends Calculator
     public static function h9($h, $ip)
     {
         $ip = self::parseInnings($ip);
-    
+
         return round((($h * Game::TOTAL_INNINGS) / $ip), 1);
     }
-    
+
     /**
      * @param  int   $hr The number of home runs
      * @param  int   $ip The number of innings pitched
@@ -56,7 +56,7 @@ class PitchingCalculator extends Calculator
     public static function hr9($hr, $ip)
     {
         $ip = self::parseInnings($ip);
-        
+
         return round((($hr * Game::TOTAL_INNINGS) / $ip), 1);
     }
 
@@ -68,10 +68,10 @@ class PitchingCalculator extends Calculator
     public static function bb9($bb, $ip)
     {
         $ip = self::parseInnings($ip);
-        
+
         return round((($bb * Game::TOTAL_INNINGS) / $ip), 1);
     }
-    
+
     /**
      * @param  int   $so The number of strike outs
      * @param  int   $ip The number of innings pitched
@@ -80,9 +80,9 @@ class PitchingCalculator extends Calculator
     public static function so9($so, $ip)
     {
         $ip = self::parseInnings($ip);
-        
+
         return round((($so *Game::TOTAL_INNINGS) / $ip), 1);
     }
-    
-    
+
+
 }
