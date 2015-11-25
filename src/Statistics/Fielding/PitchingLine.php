@@ -19,10 +19,18 @@ class PitchingLine extends Line
     protected $bb9;
     protected $so9;
 
+    /**
+     * @return array A key-value array of all the calculated pitching stats
+     */
     public static function getLine()
     {
         return array_merge($this->getLine(), [
-            'era' => $this->get('era')
+            'era' => $this->get('era'),
+            'whip' => $this->get('whip'),
+            'h9' => $this->get('h9'),
+            'hr9' => $this->get('hr9'),
+            'bb9' => $this->get('bb9'),
+            'so9' => $this->get('so9')
         ]);
     }
 }

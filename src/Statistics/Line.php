@@ -54,6 +54,11 @@ abstract class Line
     protected $hbp;
 
     /**
+     * @var int Strike outs
+     */
+    protected $so;
+
+    /**
      * @param array $stats An array of integer stats
      */
     public function __construct(array $stats)
@@ -89,11 +94,11 @@ abstract class Line
     public function getLine()
     {
         return [
-            'gp' => $this->gp,
-            '1b' => $this->b1,
-            '2b' => $this->b2,
-            '3b' => $this->b3,
-            'hr' => $this->hr
+            'gp' => $this->get('gp'),
+            '1b' => $this->get('b1'),
+            '2b' => $this->get('b2'),
+            '3b' => $this->get('b3'),
+            'hr' => $this->get('hr')
         ];
     }
 }
