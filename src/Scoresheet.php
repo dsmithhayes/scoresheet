@@ -8,19 +8,19 @@ use Scoresheet\Statistics\Calculator\BattingCalculator;
 class Scoresheet
 {
     /**
-     * @var Player $player Player stats object
+     * @var array $player Player stats object
      */
-    private $player;
+    private $players;
 
     /**
      * @var PitchingLine $pitchingLine Pitching line object
      */
-    private $pitchingLine;
+    private $pitchingLines;
 
     /**
      * @var BattingLine $battingLine Batting line object
      */
-    private $battingLine;
+    private $battingLines;
 
     /**
      * @param array @playerStats And array of objects for the Scoresheet
