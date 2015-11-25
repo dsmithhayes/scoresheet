@@ -94,6 +94,17 @@ class Line
     }
 
     /**
+     * @param  string $property The name of the property to increment
+     * @return int              The incremented property value
+     */
+    public function inc($property)
+    {
+        $this->{$property}++;
+
+        return $this->{$property};
+    }
+
+    /**
      * @return array A key'd array of the properties in the line.
      */
     public function getLine()
