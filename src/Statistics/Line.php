@@ -54,6 +54,18 @@ abstract class Line
     protected $hbp;
 
     /**
+     * @param array $stats An array of integer stats
+     */
+    public function __construct(array $stats)
+    {
+        foreach ($stats as $property => $value) {
+            if (property_exists($this, $property)) {
+                $this->set($property, $value);
+            }
+        }
+    }
+
+    /**
      * @param  string $property The name of the property to get
      * @return mixed            The value of the property from the line
      */
