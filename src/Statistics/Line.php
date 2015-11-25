@@ -6,12 +6,17 @@ namespace Scoresheet\Statistics;
  * All of the properties in this class belong to a pitcher and batter
  * respectively.
  */
-abstract class Line
+class Line
 {
     /**
      * @var int Games played
      */
     protected $gp;
+
+    /**
+     * @var int At bats
+     */
+    protected $ab;
 
     /**
      * @var int Runs
