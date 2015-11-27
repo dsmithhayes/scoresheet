@@ -69,18 +69,29 @@ class Line
     public function __construct(array $stats)
     {
         foreach ($stats as $property => $value) {
-            if (property_exists($this, $property)) {
-                $this->set($property, $value);
+            if (!property_exists($this, $property)) {
+                throw new InvalidPropertyException(
+                    'Stat "' . $property . '" does not exist.'
+                );
             }
+
+            $this->set($property, $value);
         }
     }
 
     /**
      * @param  string $property The name of the property to get
      * @return mixed            The value of the property from the line
+     * @throws InvalidPropertyException
      */
     public function get($property)
     {
+        if (!property_exists($this, $property)) {
+            throw new InvalidPropertyException(
+                'Stat "' . $property . '" does not exists'
+            );
+        }
+
         return $this->{$property};
     }
 
@@ -99,9 +110,7 @@ class Line
      */
     public function inc($property)
     {
-        $this->{$property}++;
-
-        return $this->{$property};
+        return ++$this->{$property};
     }
 
     /**
