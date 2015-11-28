@@ -17,6 +17,11 @@ class PitchingLineCollection implements \Iterator
      */
     private $key;
 
+    /**
+     * Construction has to come from an array of existing PitchingLine objects.
+     *
+     * @param array $collection An array of PitchingLine objects
+     */
     public function __construct(array $collection = [])
     {
         $className = '\Scoresheet\Statistics\Fielding\PitchingLine';
@@ -30,16 +35,25 @@ class PitchingLineCollection implements \Iterator
         $this->key = 0;
     }
 
+    /**
+     * @param PitchigLine $pitchingLine A PitchingLine object
+     */
     public function push(PitchingLine $pitchingLine)
     {
         $this->collection[++$this->key] = $pitchingLine;
     }
 
+    /**
+     * @return PitchingLine The current PitchingLine object from the collection
+     */
     public function current()
     {
         return $this->collection[$this->key];
     }
 
+    /**
+     * @return int The current key in the collection.
+     */
     public function key()
     {
         return $this->key;
@@ -55,6 +69,9 @@ class PitchingLineCollection implements \Iterator
         $this->key = 0;
     }
 
+    /**
+     * @return bool Returns true if the current key is valid.
+     */
     public function valid()
     {
         return isset($this->collection[$this->key]);
