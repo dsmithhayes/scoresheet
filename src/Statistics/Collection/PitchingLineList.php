@@ -4,8 +4,9 @@ namespace Scoresheet\Statistics\Collection;
 
 use Scoresheet\Statistics\Fielding\PitchingLine;
 use Scoresheet\Statsitics\Fielding\PitchingCalculator;
+use Extedned\LinkedList;
 
-class PitchingLineCollection implements \Iterator
+class PitchingLineList extends LinkedList
 {
     /**
      * @var array $collection Array of PitchingLine objects

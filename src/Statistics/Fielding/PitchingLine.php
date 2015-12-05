@@ -22,9 +22,9 @@ class PitchingLine extends Line
     /**
      * @return array A key-value array of all the calculated pitching stats
      */
-    public static function getLine()
+    public function getLine()
     {
-        return array_merge($this->getLine(), [
+        return array_merge($parent::getLine(), [
             'era' => $this->get('era'),
             'whip' => $this->get('whip'),
             'h9' => $this->get('h9'),
