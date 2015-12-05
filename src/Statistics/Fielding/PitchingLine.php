@@ -25,12 +25,12 @@ class PitchingLine extends Line
     public function getLine()
     {
         return array_merge($parent::getLine(), [
-            'era' => $this->get('era'),
+            'era'  => $this->get('era'),
             'whip' => $this->get('whip'),
-            'h9' => $this->get('h9'),
-            'hr9' => $this->get('hr9'),
-            'bb9' => $this->get('bb9'),
-            'so9' => $this->get('so9')
+            'h9'   => $this->get('h9'),
+            'hr9'  => $this->get('hr9'),
+            'bb9'  => $this->get('bb9'),
+            'so9'  => $this->get('so9')
         ]);
     }
 }

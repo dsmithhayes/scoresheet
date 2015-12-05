@@ -4,7 +4,7 @@ namespace Scoresheet\Statistics\Collection;
 
 use Scoresheet\Statistics\Fielding\PitchingLine;
 use Scoresheet\Statsitics\Fielding\PitchingCalculator;
-use Extedned\LinkedList;
+use Extended\LinkedList;
 
 class PitchingLineList extends LinkedList
 {
@@ -18,46 +18,22 @@ class PitchingLineList extends LinkedList
      */
     private $key;
 
+    /**
+     * @param array An array of PitchingLine objects
+     */
     public function __construct(array $collection = [])
     {
-        $className = '\Scoresheet\Statistics\Fielding\PitchingLine';
+        $class = '\Scoresheet\Statistics\Fielding\PitchingLine';
 
         foreach ($collection as $line) {
-            if ($line instanceof $className) {
-                $this->collection[] = $line;
+            if ($line instanceof $class) {
+                $this->add($line);
             }
         }
-
-        $this->key = 0;
     }
 
     public function push(PitchingLine $pitchingLine)
     {
         $this->collection[++$this->key] = $pitchingLine;
-    }
-
-    public function current()
-    {
-        return $this->collection[$this->key];
-    }
-
-    public function key()
-    {
-        return $this->key;
-    }
-
-    public function next()
-    {
-        ++$this->key;
-    }
-
-    public function rewind()
-    {
-        $this->key = 0;
-    }
-
-    public function valid()
-    {
-        return isset($this->collection[$this->key]);
     }
 }

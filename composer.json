@@ -6,6 +6,7 @@
         "php": ">= 5.4",
         "slim/slim": "^2.6",
         "league/csv": "^7.2",
+        "dsmithhayes/extended": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.0"
