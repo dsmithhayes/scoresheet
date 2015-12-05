@@ -1,13 +1,13 @@
 <?php
 
-use Scoresheet\Statistics\Collection\PitchingLineList;
+use Scoresheet\Statistics\Collection\LineList;
 use Scoresheet\Statistics\Fielding\PitchingLine;
 
 class PitchingLineListTest extends PHPUnit_Framework_TestCase
 {
     public function testPitchingLineList()
     {
-        $list = new PitchingLineList([
+        $list = new LineList([
             new PitchingLine([
                 'ab' => 100,
                 'h' => 14,
